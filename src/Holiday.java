@@ -1,9 +1,6 @@
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Holiday {
   Map<String, String> holidays = new HashMap<>();
@@ -20,7 +17,7 @@ public class Holiday {
       System.out.println("Não existem feriados nesta data, gostaria de ver a lista de feriados? Sim ou Não");
       String response = value.nextLine();
 
-      if(response.equals("Sim") || response.equals("Não")) {
+      if(response.equals("Sim") || response.equals("sim") || response.equals("SIM")) {
         this.printHolidays();
       }
       
@@ -31,12 +28,9 @@ public class Holiday {
     System.out.println("Esta data é " + holiday + ". Gostaria de ver a lista de feriados? Sim ou Não" );
     String response = value.nextLine();
 
-    if(response.equals("Sim") || response.equals("Não")) {
+    if(response.equals("Sim") || response.equals("sim") || response.equals("SIM")) {
       this.printHolidays();
-    } else {
-      return;
     }
-  
   }
 
   public void printHolidays() {
